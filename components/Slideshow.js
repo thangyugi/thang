@@ -7,82 +7,191 @@ import contentItemsData from '@/data/myproject/myprojects.json'
 
 gsap.registerPlugin(Flip, Observer)
 
-const ContentItem = forwardRef(
-    ({ title, subtitle, description, tags, features, isActive }, ref) => (
+const ImagePreview = ({ image, onClose }) => {
+    const overlayRef = useRef(null)
+    const containerRef = useRef(null)
+
+    useEffect(() => {
+        // Animation khi mở preview
+        const tl = gsap.timeline()
+
+        tl.set(overlayRef.current, {
+            opacity: 0,
+        })
+            .set(containerRef.current, {
+                scale: 0.8,
+                opacity: 0,
+            })
+            .to(overlayRef.current, {
+                opacity: 1,
+                duration: 0.3,
+                ease: 'power2.out',
+            })
+            .to(
+                containerRef.current,
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.5,
+                    ease: 'back.out(1.7)',
+                },
+                '-=0.2'
+            )
+
+        // Cleanup animation khi unmount
+        return () => {
+            tl.kill()
+        }
+    }, [])
+
+    const handleClose = () => {
+        // Animation khi đóng preview
+        const tl = gsap.timeline({
+            onComplete: onClose,
+        })
+
+        tl.to(containerRef.current, {
+            scale: 0.8,
+            opacity: 0,
+            duration: 0.4,
+            ease: 'power2.in',
+        }).to(
+            overlayRef.current,
+            {
+                opacity: 0,
+                duration: 0.3,
+                ease: 'power2.in',
+            },
+            '-=0.2'
+        )
+    }
+
+    return (
         <div
-            ref={ref}
-            className={`content__item ${
-                isActive ? 'content__item--current' : ''
-            }`}
+            className="image-preview-overlay"
+            ref={overlayRef}
+            onClick={handleClose}
         >
-            <div className="content__item-scroll">
-                <h2 className="content__item-title">
-                    <span className="oh">
-                        <span className="oh__inner">{title}</span>
-                    </span>
-                </h2>
-                <div className="content__item-description">
-                    <p className="oh">
-                        <strong className="oh__inner">{subtitle}</strong>
-                    </p>
-                    <p className="oh">
-                        <span className="oh__inner">{description}</span>
-                    </p>
-                    <div className="content__item-tags oh">
-                        <div className="oh__inner">
-                            {tags.map((tag, index) => (
-                                <span key={index} className="content__item-tag">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div className="features">
-                    <h3 className="features__title oh">
-                        <span className="oh__inner">担当内容</span>
-                    </h3>
-                    <ul className="features__list">
-                        {features.map((feature, index) => (
-                            <li key={index} className="features__item oh">
-                                <div className="oh__inner">
-                                    <h4 className="features__item-title">
-                                        {feature.title}
-                                    </h4>
-                                    <ul className="features__sublist">
-                                        {feature.items.map(
-                                            (item, itemIndex) => (
-                                                <li
-                                                    key={itemIndex}
-                                                    className="features__subitem"
-                                                >
-                                                    {item}
-                                                </li>
-                                            )
-                                        )}
-                                    </ul>
-                                    {feature.image && (
-                                        <div className="features__image-wrapper">
-                                            <img
-                                                src={feature.image}
-                                                alt={feature.title}
-                                                className="features__image"
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-            <div className="scroll-arrow">
-                <svg width="40" height="40" viewBox="0 0 24 24">
-                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
-                </svg>
+            <div
+                className="image-preview-container"
+                ref={containerRef}
+                onClick={(e) => e.stopPropagation()}
+            >
+                <img src={image} alt="Preview" className="image-preview" />
+                <button className="image-preview-close" onClick={handleClose}>
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                    Close Preview
+                </button>
             </div>
         </div>
     )
+}
+
+const ContentItem = forwardRef(
+    ({ title, subtitle, description, tags, features, isActive }, ref) => {
+        const [previewImage, setPreviewImage] = useState(null)
+
+        const handleImageClick = (image, e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setPreviewImage(image)
+        }
+
+        const closePreview = () => {
+            setPreviewImage(null)
+        }
+        return (
+            <div
+                ref={ref}
+                className={`content__item ${
+                    isActive ? 'content__item--current' : ''
+                }`}
+            >
+                <div className="content__item-scroll">
+                    <h2 className="content__item-title">
+                        <span className="oh">
+                            <span className="oh__inner">{title}</span>
+                        </span>
+                    </h2>
+                    <div className="content__item-description">
+                        <p className="oh">
+                            <strong className="oh__inner">{subtitle}</strong>
+                        </p>
+                        <p className="oh">
+                            <span className="oh__inner">{description}</span>
+                        </p>
+                        <div className="content__item-tags oh">
+                            <div className="oh__inner">
+                                {tags.map((tag, index) => (
+                                    <span
+                                        key={index}
+                                        className="content__item-tag"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="features">
+                        <h3 className="features__title oh">
+                            <span className="oh__inner">担当内容</span>
+                        </h3>
+                        <ul className="features__list">
+                            {features.map((feature, index) => (
+                                <li key={index} className="features__item oh">
+                                    <div className="oh__inner">
+                                        <h4 className="features__item-title">
+                                            {feature.title}
+                                        </h4>
+                                        <ul className="features__sublist">
+                                            {feature.items.map(
+                                                (item, itemIndex) => (
+                                                    <li
+                                                        key={itemIndex}
+                                                        className="features__subitem"
+                                                    >
+                                                        {item}
+                                                    </li>
+                                                )
+                                            )}
+                                        </ul>
+                                        {feature.image && (
+                                            <div
+                                                className="features__image-wrapper"
+                                                onClick={(e) =>
+                                                    handleImageClick(
+                                                        feature.image,
+                                                        e
+                                                    )
+                                                }
+                                            >
+                                                <img
+                                                    src={feature.image}
+                                                    alt={feature.title}
+                                                    className="features__image"
+                                                />
+                                            </div>
+                                        )}
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                {previewImage && (
+                    <ImagePreview image={previewImage} onClose={closePreview} />
+                )}
+                <div className="scroll-arrow">
+                    <svg width="40" height="40" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                    </svg>
+                </div>
+            </div>
+        )
+    }
 )
 
 ContentItem.displayName = 'ContentItem'
