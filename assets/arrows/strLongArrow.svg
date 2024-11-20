@@ -1,0 +1,29 @@
+<svg width="13" height="191" viewBox="0 0 13 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.7">
+<path d="M5.83701 0.500003L5.83701 180.606L7.83699 180.612L7.83718 0.500003L5.83701 0.500003Z"  fill='url(#a)'  fill-opacity="0.6"/>
+<path d="M6.7058 190.597L12.4923 180.605L0.946301 180.589L6.7058 190.597Z"  fill='url(#a)'  fill-opacity="0.6"/>
+</g>
+<defs>
+    <defs>
+      <linearGradient id='a' gradientUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
+         <stop offset='0' stop-color='red'>
+            <animate attributeName="stop-color"
+               values="red;purple;blue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='.5' stop-color='purple'>
+            <animate attributeName="stop-color"
+               values="purple;blue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='blue'>
+            <animate attributeName="stop-color"
+               values="blue;green;yellow;orange;red;purple;blue;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="720 .5 .5"
+            dur="20s" repeatCount="indefinite" />
+      </linearGradient>
+   </defs>
+</defs>
+</svg>

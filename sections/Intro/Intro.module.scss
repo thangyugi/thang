@@ -1,0 +1,89 @@
+.www-intro {
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  // background-color: black;
+  .cover {
+    display: flex;
+    flex-direction: column;
+    padding-top: clamp(88px, 8vw, 156px);
+    padding-bottom: clamp(88px, 8vw, 120px);
+    overflow: hidden;
+    .wrapper {
+      display: flex;
+      .opening {
+        flex: 1 1 34%;
+        min-width: 320px;
+      }
+      .content {
+        flex: 1 1 66%;
+        min-width: 350px;
+        margin-top: 12px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 48px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: left;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .conclude {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    pointer-events: none;
+    .quotes {
+      padding-right: 10%;
+    }
+  }
+}
+
+// Media Queries
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .www-intro {
+    // background-color: black;
+    .cover {
+      .wrapper {
+        flex-direction: column;
+        .opening {
+        }
+        .content {
+          align-items: center;
+          gap: 3px;
+        }
+      }
+    }
+
+    .conclude {
+    }
+  }
+}

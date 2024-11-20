@@ -1,0 +1,108 @@
+.button_become {
+  width: 15rem;
+  margin: 0;
+  padding: 0;
+  counter-increment: itemcounter;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+
+  //   &::before {
+  //     color: #ffffff;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     content: counters(itemcounter, '.', decimal-leading-zero);
+  .button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: $greenlighter;
+    border: none;
+    padding: 1.5rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    color: $orangewhite;
+    border-radius: 50px;
+    &.button--atlas:hover .marquee__inner {
+      animation-play-state: running;
+      opacity: 1;
+      transition-duration: 0.4s;
+    }
+    .marquee {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      pointer-events: none;
+
+      .marquee__inner {
+        width: fit-content;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        --offset: 1rem;
+        --move-initial: calc(-25% + var(--offset));
+        --move-final: calc(-50% + var(--offset));
+        transform: translate3d(var(--move-initial), 0, 0);
+        animation: marquee 1s linear infinite;
+        animation-play-state: paused;
+        opacity: 0;
+      }
+    }
+
+    .marquee span {
+      text-align: center;
+      white-space: nowrap;
+      font-style: italic;
+      padding: 1.5rem 0.5rem;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+      }
+
+      100% {
+        transform: translate3d(var(--move-final), 0, 0);
+      }
+    }
+  }
+  .button::before,
+  .button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .button--atlas {
+    font-family: signo, sans-serif;
+    font-weight: 500;
+  }
+
+  .button--atlas > span {
+    display: inline-block;
+  }
+
+  .button--atlas:hover > span {
+    opacity: 0;
+  }
+
+  //button button--atlas
+  ///marquee
+  /// marquee__inner
+}

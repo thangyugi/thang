@@ -1,0 +1,53 @@
+:root {
+  --background: #101010;
+  --white: #fff;
+  --black: #1e1e22;
+  --gray: #383838;
+  --graybg: #292929;
+  --graydark: #d3d3d3;
+  --border: #ffffff2b;
+  --greenlighter: #064439;
+  --orangewhite: #eee7ce;
+  --greendeep: #0a2e22;
+  --illu: #18a268;
+  --linkgreen: #00ffa5;
+  --warning: #c13636;
+  --blue: #2663eb;
+  // marquee text
+
+  --marquee-width: 100vw;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  --item-font-size: 10vw;
+
+  //radius
+
+  --radius-sm: 3px;
+  --radius-md: 15px;
+  --radius-lg: 30px;
+}
+
+// Breakpoints
+$layout-breakpoint-large: 1920px;
+$layout-breakpoint-medium: 1440px;
+$layout-breakpoint-small: 960px;
+$layout-breakpoint-xsmall: 480px;
+
+// Colors
+// Colors
+// Colors
+// Colors
+// Colors
+// Colors
+// Colors
+// Colors
+$background: #101010;
+$white: #fff;
+$black: #1e1e22;
+$gray: #383838;
+$greenlighter: #064439;
+$orangewhite: #eee7ce;
+$greendeep: #0a2e22;
+$illu: #18a268;
+$border: #ffffff2b;

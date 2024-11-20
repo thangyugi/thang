@@ -1,0 +1,118 @@
+---
+title: 'Quốc tế hóa (Internationalization) hay i18n'
+publishedAt: '2022-12-01'
+excerpt: 'Quốc tế hóa (Internationalization), hay i18n là một khái niệm quan trọng trong lĩnh vực phát triển web hiện nay. Nó giúp cho các ứng dụng web có thể hoạt động đa ngôn ngữ và đa vùng miền một cách linh hoạt. Trong bài viết này, chúng ta sẽ tìm hiểu về cách thực hiện i18n trong JavaScript và xem một ví dụ về ứng dụng thực tế.'
+cover_image: '/blog/i18n-quoc-te-hoa/i18n-quoc-te-hoa.jpg'
+---
+
+Quốc tế hóa (Internationalization), hay i18n là một khái niệm quan trọng trong lĩnh vực phát triển web hiện nay. Nó giúp cho các ứng dụng web có thể hoạt động đa ngôn ngữ và đa vùng miền một cách linh hoạt. Trong bài viết này, chúng ta sẽ tìm hiểu về cách thực hiện i18n trong JavaScript và xem một ví dụ về ứng dụng thực tế.
+
+##### 1. Cách thực hiện i18n trong JavaScript
+
+Để thực hiện i18n trong JavaScript, ta có thể sử dụng các thư viện hỗ trợ như i18next, Intl.js, Globalize.js, FormatJS,... trong đó i18next là một trong những thư viện được sử dụng phổ biến nhất. Thư viện này hỗ trợ nhiều ngôn ngữ, có tính năng caching và có thể tích hợp với các framework khác như React, Vue, Angular,...
+
+Các bước để thực hiện i18n với i18next như sau:
+
+Cài đặt thư viện i18next bằng lệnh npm install i18next.
+Khởi tạo i18next bằng cách định nghĩa các ngôn ngữ và các file ngôn ngữ tương ứng.
+Sử dụng các hàm của i18next để lấy các từ, cụm từ hoặc câu trong file ngôn ngữ và đưa vào ứng dụng.
+
+##### 2. Ví dụ về i18n trong dự án
+
+Cài đặt và sử dụng react-i18next
+Tiến hành cài i18next bằng câu lệnh yarn add i18next react-i18next hoặc với npm npm install i18next react-i18next. Tiếp theo, chúng ta sẽ học cách dịch title trên từ tiếng Anh sang tiếng Việt và ngược lại. Đầu tiên chúng ta cần tạo các file dịch. Giả sử chúng ta có các file JSON chứa nguồn văn bản bao gồm eng.json và vie.json. Tạo mới file i18n.js và sửa đổi như sau:
+
+```js
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import English from './eng.json'
+import Vietnamese from './vie.json'
+
+const resources = {
+  eng: {
+    translation: English,
+  },
+  vie: {
+    translation: Vietnamese,
+  },
+}
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'eng',
+  keySeparator: false,
+  interpolation: {
+    escapeValue: false,
+  },
+})
+
+export default i18n
+```
+
+Chúng ta đã import các nguồn vào resources và đặt ngôn ngữ mặc định là tiếng Anh (lng: "eng"). Bây giờ chúng ta sẽ thêm text vào các file JSON, lưu ý rằng các key trong mỗi file phải tương ứng với những file còn lại.
+
+###### /src/i18n/eng.json
+
+```json
+{
+  "title": "Translate your react-app with react-i18next"
+}
+```
+
+###### /src/i18n/vie.json
+
+```json
+{
+  "title": "Chuyển đổi đa ngôn ngữ với react-i18next"
+}
+```
+
+Import file i18n.js vào index.js, nó sẽ có cấu trúc như thế này:
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import './i18n/i18n'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
+
+reportWebVitals()
+```
+
+Vậy là đã xong phần config. Tiếp đến hãy quay trở lại App.js để translate title. Bạn có thể thay đổi ngôn ngữ của app bằng function changeLanguage trong object i18n.
+
+###### App.js
+
+```js
+import { useTranslation } from 'react-i18next'
+import i18n from 'i18next'
+import './App.css'
+
+function App() {
+  const { t } = useTranslation('translation')
+  const changeLanguage = (e) => {
+    const languageValue = e.target.value
+    i18n.changeLanguage(languageValue)
+  }
+  return (
+    <div>
+      <h1>{t('title')}</h1>
+      <select onChange={changeLanguage}>
+        <option value='eng'>English</option>
+        <option value='vie'>Vietnamese</option>
+      </select>
+    </div>
+  )
+}
+
+export default App
+```
+
+Nếu bạn muốn thử chuyển đổi thêm nhiều ngôn ngữ khác, hãy tạo thêm các file nguồn (JSON) tương ứng với mỗi ngôn ngữ và add chúng vào resources.

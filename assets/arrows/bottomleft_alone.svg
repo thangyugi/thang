@@ -1,0 +1,27 @@
+<svg width="143" height="76" viewBox="0 0 143 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.7" d="M141.183 74.8505L141.089 25.6573L142.447 25.6547L142.541 74.8479L141.183 74.8505ZM128.146 6.68194L9.94436 7.02019L9.94054 5.02019L128.142 4.68194L128.146 6.68194ZM141.089 25.6573C141.069 15.1639 135.274 6.66834 128.146 6.68194L128.142 4.68194C136.02 4.66692 142.425 14.0567 142.447 25.6547L141.089 25.6573Z"  fill='url(#a)'  fill-opacity="0.6"/>
+<path opacity="0.7" d="M0.000954864 5.73699L4.99039 8.64196L9.97981 11.5469L10.0219 9.9279e-06L5.01145 2.8685L0.000954864 5.73699Z"  fill='url(#a)'  fill-opacity="0.6"/>
+<defs>
+    <defs>
+      <linearGradient id='a' gradientUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
+         <stop offset='0' stop-color='red'>
+            <animate attributeName="stop-color"
+               values="red;purple;blue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='.5' stop-color='purple'>
+            <animate attributeName="stop-color"
+               values="purple;blue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='blue'>
+            <animate attributeName="stop-color"
+               values="blue;green;yellow;orange;red;purple;blue;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="720 .5 .5"
+            dur="20s" repeatCount="indefinite" />
+      </linearGradient>
+   </defs>
+</defs>
+</svg>

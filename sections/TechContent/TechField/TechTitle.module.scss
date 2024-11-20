@@ -1,0 +1,36 @@
+.www-techTitle {
+  text-align: center;
+  margin-top: -30px;
+  padding: 0 1.5rem;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .www-techTitle {
+    margin-top: -20px;
+    padding: 0 1.5rem;
+  }
+}

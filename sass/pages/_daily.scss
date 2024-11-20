@@ -1,0 +1,39 @@
+.www_daily-journal {
+}
+.www_daily-journal-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.www_daily-journal-sub {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 5rem;
+  //   padding-right: 5rem;
+}
+
+.www_daily-journal-main {
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .www_daily-journal-wrapper {
+    flex-direction: column;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .www_daily-journal-wrapper {
+    flex-direction: column;
+  }
+}

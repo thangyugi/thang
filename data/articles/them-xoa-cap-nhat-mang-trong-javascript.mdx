@@ -1,0 +1,49 @@
+---
+title: 'Thêm, xóa và cập nhật phần tử của mảng bằng một phương thức trong JavaScript'
+publishedAt: '2022-12-01'
+excerpt: 'Nghệ thuật lập trình là kỹ năng kiểm soát sự phức tạp. — JavaScript có các phương thức riêng biệt để thêm, thay thế và xóa các phần tử khỏi...'
+cover_image: '/blog/them-xoa-cap-nhat-mang-trong-javascript/them-xoa-cap-nhat-mang-trong-javascript.jpg'
+---
+
+JavaScript có các phương thức riêng biệt để thêm, thay thế và xóa các phần tử khỏi một mảng.
+Chẳng hạn, các hàm `push()` và `shift()` để thêm, xóa và` pop()` để xác định phần tử trong một mảng để thay thế.
+Bạn đã bao giờ thử hoàn thành tất cả những điều đó chỉ bằng một phương pháp chưa? `unshift()` `replace()`
+
+Và phương pháp thú vị này là `splice()`!
+Trong blog này, tôi sẽ hướng dẫn bạn về hành trình viết mã của bạn, minh họa cách một phương thức đơn lẻ như vậy `splice()` có thể thực hiện cả ba thao tác — thêm, xóa và thay thế.
+
+Chúng ta hãy xem xét `splice()` phương pháp trước khi tiếp tục-
+
+Phương thức mối nối ()
+Đây là một tính năng của ES1(ECMAScript1) , được hỗ trợ đầy đủ trong tất cả các trình duyệt. Phương splice()thức ghi đè lên mảng ban đầu.
+
+Giá trị trả về — Một mảng chứa các mục đã loại bỏ (nếu có, nếu không nó sẽ trả về mảng trống []).
+
+Cú pháp —
+
+```js
+array.splice(index, howManyRemove, item1,...,itemX)
+```
+
+Trong đó,
+— `index` là vị trí để thêm/xóa các mục. (Giá trị âm của chỉ mục xác định vị trí từ cuối mảng)
+— `howManyRemove` là số mục cần xóa.
+— `item1,...,itemX` xác định (các) phần tử mới sẽ được thêm vào.
+
+```js
+const animals = ['Cow', 'Dog', 'Chicken', 'lion', 'Cat']
+const indexOfanimal = animals.length
+const addAnimal = animals.splice(indexOfanimal, 0, 'Monkey')
+console.log(animals) //Updated animals array
+console.log(addAnimal) //Return value of splice() method
+```
+
+```js
+const animals = ['Cow', 'Dog', 'Chicken', 'lion', 'Cat']
+const indexOfanimal = animals.indexOf('Chicken')
+
+if (indexOfanimal !== -1) {
+  animals.splice(indexOfanimal, 0, 'Monkey')
+  console.log(animals) //Updated animals array
+} else console.log('Not Fount')
+```

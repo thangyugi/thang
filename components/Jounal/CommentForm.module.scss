@@ -1,0 +1,19 @@
+.www_commentForm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  max-width: 790px;
+  gap: 10px;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    background-color: var(--graybg);
+    border: 0.5px solid var(--border);
+  }
+}

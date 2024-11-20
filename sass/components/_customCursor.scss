@@ -1,0 +1,87 @@
+.custom-cursor {
+  position: fixed;
+  top: 400px;
+  left: 400px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  // border: 2px solid purple;
+  border-radius: 100%;
+
+  background-image: radial-gradient(
+    circle farthest-corner at 50% 50%,
+    rgba(239, 230, 221, 0.45) 15%,
+    transparent 70%
+  );
+  -webkit-transition: opacity 350ms ease, height 350ms ease, width 350ms ease,
+    background-color 350ms ease;
+  transition: opacity 350ms ease, height 350ms ease, width 350ms ease,
+    background-color 350ms ease;
+  color: transparent;
+
+  transform: translate(-50%, -50%);
+  -webkit-transition-duration: 100ms;
+  transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  transition-property: width, height, border;
+  will-change: width, height, transform, border;
+  pointer-events: none;
+  z-index: 999;
+  &.pointer {
+    border: 4px solid black !important;
+  }
+
+  &.hovered {
+    --size: 200px;
+
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(
+      circle closest-side,
+      rgba(0, 113, 128, 0.776),
+      transparent
+    );
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+    border: none;
+  }
+}
+
+.cursor-small {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: rgb(55, 226, 178);
+
+  &.hovered {
+    --size: 100px;
+
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(
+      circle closest-side,
+      rgba(0, 128, 70, 0.35),
+      transparent
+    );
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+    border: none;
+  }
+}

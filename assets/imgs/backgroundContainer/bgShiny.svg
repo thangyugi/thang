@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="no"?>
+<svg id="linur" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" >
+<line x1="0.245131" y1="-0.435788" x2="960.245" y2="539.564" stroke="#5C1A83" stroke-dasharray="0,0,735.6097930012556,365.8435761393694"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.2813926161019658s" values="0,0,735.6097930012556,365.8435761393694; 
+          0,365.8435761393694,735.6097930012556,0; 
+          735.6097930012556,365.8435761393694,0,0" keyTimes="0; 0.33214622278999206; 1" begin="0.4556666954373141s"></animate></line>
+<line x1="-0.245131" y1="1079.56" x2="959.755" y2="539.564" stroke="#5C1A83" stroke-dasharray="0,0,835.5043318921208,265.94745033444167"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.307821857837975s" values="0,0,835.5043318921208,265.94745033444167; 
+          0,265.94745033444167,835.5043318921208,0; 
+          835.5043318921208,265.94745033444167,0,0" keyTimes="0; 0.24145174089857502; 1" begin="1.0386707414851772s"></animate></line>
+<line x1="1920.25" y1="0.435788" x2="960.245" y2="540.436" stroke="#5C1A83" stroke-dasharray="0,0,744.9063224655532,356.5516853469468"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.148738041912113s" values="0,0,744.9063224655532,356.5516853469468; 
+          0,356.5516853469468,744.9063224655532,0; 
+          744.9063224655532,356.5516853469468,0,0" keyTimes="0; 0.32370883212793544; 1" begin="0.8657536762420874s"></animate></line>
+<line x1="1920" y1="540.5" x2="960" y2="540.5" stroke="#5C1A83" stroke-dasharray="0,0,722.2929616593899,237.70703834061013"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.2538047023840004s" values="0,0,722.2929616593899,237.70703834061013; 
+          0,237.70703834061013,722.2929616593899,0; 
+          722.2929616593899,237.70703834061013,0,0" keyTimes="0; 0.2476114982714689; 1" begin="0.013573096983426639s"></animate></line>
+<line x1="4.37114e-08" y1="539.5" x2="960" y2="539.5" stroke="#5C1A83" stroke-dasharray="0,0,669.1540634770679,290.8459365229321"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.2102542311074687s" values="0,0,669.1540634770679,290.8459365229321; 
+          0,290.8459365229321,669.1540634770679,0; 
+          669.1540634770679,290.8459365229321,0,0" keyTimes="0; 0.3029645172113876; 1" begin="0.009615193953716544s"></animate></line>
+<line x1="1919.75" y1="1080.44" x2="959.755" y2="540.436" stroke="#5C1A83" stroke-dasharray="0,0,792.3195280534305,309.13164382156947"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.1876268708766338s" values="0,0,792.3195280534305,309.13164382156947; 
+          0,309.13164382156947,792.3195280534305,0; 
+          792.3195280534305,309.13164382156947,0,0" keyTimes="0; 0.280658509169621; 1" begin="0.7039561539419058s"></animate></line>
+<line x1="964.5" y1="6.55671e-08" x2="964.5" y2="540" stroke="#5C1A83" stroke-dasharray="0,0,376.61314819611,163.38685180389"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.25335648888826s" values="0,0,376.61314819611,163.38685180389; 
+          0,163.38685180389,376.61314819611,0; 
+          376.61314819611,163.38685180389,0,0" keyTimes="0; 0.3025682440812778; 1" begin="0.16907864942910983s"></animate></line>
+<line x1="1314.42" y1="0.271948" x2="964.419" y2="540.272" stroke="#5C1A83" stroke-dasharray="0,0,438.5441214668718,204.9624703300032"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.132818797057509s" values="0,0,438.5441214668718,204.9624703300032; 
+          0,204.9624703300032,438.5441214668718,0; 
+          438.5441214668718,204.9624703300032,0,0" keyTimes="0; 0.3185087347088129; 1" begin="0.011563677784011298s"></animate></line>
+<line x1="605.416" y1="-0.276816" x2="964.416" y2="539.723" stroke="#5C1A83" stroke-dasharray="0,0,456.91521960841834,191.5297266806442"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.3082497325719094s" values="0,0,456.91521960841834,191.5297266806442; 
+          0,191.5297266806442,456.91521960841834,0; 
+          456.91521960841834,191.5297266806442,0,0" keyTimes="0; 0.29536775292449335; 1" begin="1.1447716834527384s"></animate></line>
+<line x1="1919.89" y1="759.487" x2="959.889" y2="540.487" stroke="#5C1A83" stroke-dasharray="0,0,641.7637195329226,342.9001598616087"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.370716952744985s" values="0,0,641.7637195329226,342.9001598616087; 
+          0,342.9001598616087,641.7637195329226,0; 
+          641.7637195329226,342.9001598616087,0,0" keyTimes="0; 0.3482408231247983; 1" begin="0.7713021714393522s"></animate></line>
+<line x1="-0.111206" y1="758.513" x2="959.889" y2="539.513" stroke="#5C1A83" stroke-dasharray="0,0,645.5905201707474,339.0725657667527"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.0513726012594806s" values="0,0,645.5905201707474,339.0725657667527; 
+          0,339.0725657667527,645.5905201707474,0; 
+          645.5905201707474,339.0725657667527,0,0" keyTimes="0; 0.3443538918125695; 1" begin="0.330624982689037s"></animate></line>
+<line x1="0.135373" y1="269.519" x2="960.135" y2="539.519" stroke="#5C1A83" stroke-dasharray="0,0,699.2577120502715,297.98813755910345"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.313652457454976s" values="0,0,699.2577120502715,297.98813755910345; 
+          0,297.98813755910345,699.2577120502715,0; 
+          699.2577120502715,297.98813755910345,0,0" keyTimes="0; 0.2988111082897227; 1" begin="0.1700560362147821s"></animate></line>
+<line x1="1920.14" y1="270.481" x2="960.135" y2="540.481" stroke="#5C1A83" stroke-dasharray="0,0,735.9538889821589,261.2971486154973"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.2838314276964815s" values="0,0,735.9538889821589,261.2971486154973; 
+          0,261.2971486154973,735.9538889821589,0; 
+          735.9538889821589,261.2971486154973,0,0" keyTimes="0; 0.2620174246646594; 1" begin="0.4497301097231468s"></animate></line>
+<setting>{"type":"loader","speed":20,"random":0.8,"shift":0.5,"size":0.8,"rupture":50}</setting></svg>

@@ -1,0 +1,31 @@
+.www_divider {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .www_divider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .www_divider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

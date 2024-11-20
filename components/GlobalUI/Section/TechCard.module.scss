@@ -1,0 +1,89 @@
+.www-techCard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+
+.techCard_wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  padding: 10px;
+
+  flex-direction: column;
+  border-radius: 100%;
+  border-radius: 100%;
+  color: white;
+  border: 1px solid #ffffff2b;
+  width: 5rem;
+  height: 5rem;
+  .techCard_cover {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .techCard_icon {
+      width: 35px;
+      height: 35px;
+
+      @media (min-width: 481px) and (max-width: 767px) {
+        width: 25px;
+        height: 25px;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .techCard_wrapper {
+    width: 4rem;
+    height: 4rem;
+    .techCard_cover {
+      //pass
+      .techCard_icon {
+        //pass
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .techCard_wrapper {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    .techCard_cover {
+      //pass
+      .techCard_icon {
+        //pass
+      }
+    }
+  }
+}

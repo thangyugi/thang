@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Cal Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('../../assets/cal-sans/fonts/otf/CalSans-SemiBold.otf');
+  src: url('../../assets/cal-sans/fonts/webfonts/CalSans-SemiBold.ttf')
+    format('truetype');
+  src: url('../../assets/cal-sans/fonts/webfonts/CalSans-SemiBold.woff')
+    format('woff');
+  src: url('../../assets/cal-sans/fonts/webfonts/CalSans-SemiBold.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'SoDo Sans';
+//   font-weight: normal;
+//   font-style: normal;
+//   src: url('../../assets/SodoFont/SoDoSans-Regular.eot');
+//   src: url('../../assets/SodoFont/SoDoSans-Regular.ttf') format('truetype');
+//   src: url('../../assets/SodoFont/SoDoSans-Regular.woff') format('woff');
+//   src: url('../../assets/SodoFont/SoDoSans-Regular.woff2') format('woff2');
+
+//   font-style: normal;
+// }
+
+html {
+  // font-size: 62.5%;
+  color: $white;
+  line-height: 1.25;
+  font-family: 'Cal Sans';
+}
+
+p,
+span {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+a {
+  font-weight: 600;
+}

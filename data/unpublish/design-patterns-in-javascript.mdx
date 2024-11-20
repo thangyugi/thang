@@ -1,0 +1,113 @@
+---
+title: 'Design Patterns in JavaScript'
+publishedAt: '2022-02-16'
+excerpt: 'Design pattern là một giải pháp được phát triển để giải quyết một vấn đề phổ biến trong lập trình. Trong Javascript, có rất nhiều design pattern được sử dụng để cải thiện tính bảo trì, tái sử dụng và hiệu quả của mã.'
+cover_image: '/blog/design-patterns-javascript/design-pattern-javascript.jpg'
+---
+
+##### Design Patterns in JavaScript
+
+Design pattern là một giải pháp được phát triển để giải quyết một vấn đề phổ biến trong lập trình. Trong Javascript, có rất nhiều design pattern được sử dụng để cải thiện tính bảo trì, tái sử dụng và hiệu quả của mã.
+Dưới đây là 2 Design pattern thường được sử dụng trong dự án Javascript:
+
+###### 1. Singleton Pattern:
+
+Singleton là một Design pattern giúp đảm bảo rằng chỉ có một thể hiện duy nhất của một lớp được tạo ra trong suốt vòng đời của ứng dụng. Singleton pattern rất hữu ích khi bạn muốn giới hạn số lượng thể hiện của một đối tượng và chắc chắn rằng mọi thể hiện đều được sử dụng chính xác như nhau.
+
+###### Ví dụ:
+
+Trong dự án của bạn, bạn có một đối tượng để quản lý các thông tin về người dùng. Bạn muốn đảm bảo rằng chỉ có một thể hiện của đối tượng người dùng trong ứng dụng và mọi nơi đều truy cập đến cùng một đối tượng. Bạn có thể sử dụng Singleton pattern để đảm bảo điều này.
+
+```js
+class User {
+  constructor(name, email) {
+    this.name = name
+    this.email = email
+  }
+}
+
+const SingletonUser = (function () {
+  let instance
+
+  function createInstance() {
+    const user = new User('John Doe', 'john@example.com')
+    return user
+  }
+
+  return {
+    getUser: function () {
+      if (!instance) {
+        instance = createInstance()
+      }
+      return instance
+    },
+  }
+})()
+
+const user1 = SingletonUser.getUser()
+const user2 = SingletonUser.getUser()
+
+console.log(user1 === user2) // true
+```
+
+###### 2. Observer Pattern:
+
+Observer là một Design pattern giúp cho việc giám sát sự thay đổi của một đối tượng và thông báo cho các đối tượng khác về sự thay đổi này. Pattern này rất hữu ích khi bạn cần theo dõi các sự kiện và thực hiện các hành động phù hợp với sự kiện đó.
+
+###### Ví dụ:
+
+Trong dự án của bạn, bạn muốn theo dõi thay đổi trạng thái của một đối tượng thông qua nhiều thành phần khác nhau trong ứng dụng. Bạn có thể sử dụng Observer pattern để thông báo cho các thành phần khác biết khi trạng thái của đối tượng đã thay đổi.
+
+Giả sử trong một ứng dụng web, bạn muốn theo dõi sự kiện khi người dùng thêm một sản phẩm vào giỏ hàng. Khi sản phẩm được thêm vào giỏ hàng, bạn muốn cập nhật tổng số lượng sản phẩm hiển thị trên trang web.
+
+Để giải quyết vấn đề này, bạn có thể sử dụng Observer Pattern. Bạn tạo ra một đối tượng "Giỏ hàng" và các đối tượng "Quan sát viên" để theo dõi sự kiện thêm sản phẩm vào giỏ hàng. Mỗi khi một sản phẩm được thêm vào giỏ hàng, đối tượng "Giỏ hàng" sẽ thông báo cho tất cả các đối tượng "Quan sát viên" về sự kiện này. Đối tượng "Quan sát viên" sẽ cập nhật tổng số lượng sản phẩm hiển thị trên trang web.
+
+```js
+class Cart {
+  constructor() {
+    this.items = []
+    this.observers = []
+  }
+
+  addItem(item) {
+    this.items.push(item)
+    this.notifyObservers()
+  }
+
+  getItems() {
+    return this.items
+  }
+
+  attach(observer) {
+    this.observers.push(observer)
+  }
+
+  notifyObservers() {
+    for (let observer of this.observers) {
+      observer.update(this)
+    }
+  }
+}
+
+class ProductCounter {
+  constructor() {
+    this.total = 0
+  }
+
+  update(cart) {
+    const items = cart.getItems()
+    this.total = items.length
+    console.log(`Total products: ${this.total}`)
+  }
+}
+
+const cart = new Cart()
+const counter = new ProductCounter()
+
+cart.attach(counter)
+
+cart.addItem({ name: 'Product 1', price: 100 })
+cart.addItem({ name: 'Product 2', price: 200 })
+```
+
+Trong ví dụ này, đối tượng "Giỏ hàng" là một đối tượng chứa các sản phẩm được thêm vào giỏ hàng. Đối tượng "Quan sát viên" là một đối tượng cập nhật tổng số lượng sản phẩm hiển thị trên trang web. Khi một sản phẩm được thêm vào giỏ hàng, đối tượng "Giỏ hàng" sẽ thông báo cho đối tượng "Quan sát viên" để cập nhật số lượng sản phẩm.

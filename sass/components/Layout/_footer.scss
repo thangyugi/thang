@@ -1,0 +1,56 @@
+// <Heading level={6}>Routes</Heading>
+
+// <nav
+//   aria-label='Footer Services Nav'
+//   className='mt-6 flex flex-col space-y-1'
+// >
+//   <Link href='/personal-space'>
+//     <Paragraph level='md'>Personal Space</Paragraph>
+//   </Link>
+//   <Link href='/daily'>
+//     <Paragraph level='md'>Daily Journal</Paragraph>
+//   </Link>
+//   <Link href='/tech'>
+//     <Paragraph level='md'>Tech Notes</Paragraph>
+//   </Link>
+// </nav>
+
+.footer-cover {
+  position: relative;
+}
+.footer-wrapper {
+  margin-top: 10rem;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid hsla(0, 0%, 100%, 0.12);
+  overflow: hidden;
+  background-color: #000000;
+  border-radius: var(--radius-md);
+  .video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+.footer-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6.4rem 2rem 7.7rem;
+}

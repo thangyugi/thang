@@ -1,0 +1,215 @@
+$move-initial: calc(-25%);
+$move-final: calc(-150%);
+
+.techSection {
+  overflow: hidden;
+}
+
+.section-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
+.divider-full-width {
+  height: 1px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #ffffff2b;
+}
+
+.section-heading {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+.element-spinner {
+  overflow: hidden;
+  width: 100vw;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.inner-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  transform: translate3d($move-initial, 0, 0);
+  animation: marquee 20s linear infinite;
+}
+
+.elements {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.element {
+  display: inline-block;
+  min-height: 17px;
+}
+
+.element-holder {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.h3.no-margins {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.element-separator {
+  width: 28px;
+  height: 1px;
+  margin-right: 8px;
+  margin-left: 6px;
+  //   background-color: rgba(12, 64, 39, 0.4);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d($move-initial, 0, 0);
+  }
+
+  100% {
+    transform: translate3d($move-final, 0, 0);
+  }
+}
+
+@keyframes marquee-lg {
+  0% {
+    transform: translate3d(calc(-25% + 10vw), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-50% + 10vw), 0, 0);
+  }
+}
+
+.planet-banner-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.planet-heading {
+  padding: 3rem 0;
+}
+.planet-arc {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: auto;
+
+  width: 548px;
+  height: 260px;
+  border-radius: 500px;
+  opacity: 0.3;
+  -webkit-filter: blur(160px);
+  filter: blur(160px);
+
+  background: linear-gradient(
+    312.23deg,
+    var(--linkgreen) -3.97%,
+    rgba(166, 0, 255, 0) 125.5%
+  );
+
+  // background: linear-gradient(
+  //   350deg,
+  //   #00197d 22.11%,
+  //   #5f00e4 40.73%,
+  //   #034acd 54.78%,
+  //   #00492c 69.88%,
+  //   #045184 89.56%
+  // );
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .planet-arc {
+    width: 200px;
+    height: 100px;
+
+    -webkit-filter: blur(60px);
+    filter: blur(60px);
+  }
+  .www-techTitle {
+    margin-top: -20px;
+    padding: 0 1.5rem;
+  }
+}

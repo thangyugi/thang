@@ -1,0 +1,151 @@
+.www-center-tech {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 15px;
+  // Frontend Content
+  .www-frontend {
+    display: flex;
+    position: relative;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      gap: 15px;
+      justify-content: flex-end;
+      .cell {
+        display: flex;
+        flex: 1;
+        position: relative;
+        flex-direction: column;
+      }
+    }
+  }
+
+  // Backend Content
+  .www-backend {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    .wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      justify-content: flex-end;
+      .cell {
+        display: flex;
+        gap: 15px;
+        position: relative;
+        flex: 1;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .www-center-tech {
+    gap: 10px;
+    .www-frontend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+    .www-backend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .www-center-tech {
+    gap: 10px;
+    .www-frontend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+    .www-backend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .www-center-tech {
+    gap: 10px;
+    .www-frontend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+    .www-backend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .www-center-tech {
+    gap: 10px;
+    .www-frontend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+    .www-backend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .www-center-tech {
+    gap: 10px;
+    .www-frontend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+    .www-backend {
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// // Media Queries
+// @media (min-width: 1281px) {
+// }
+
+// @media (min-width: 1025px) and (max-width: 1280px) {
+// }
+
+// @media (min-width: 768px) and (max-width: 1024px) {
+// }
+
+// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+// }
+
+// @media (min-width: 481px) and (max-width: 767px) {
+// }
+
+// @media (min-width: 320px) and (max-width: 480px) {
+// }

@@ -1,0 +1,106 @@
+.post-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.post-card {
+  position: relative;
+  display: flex;
+  padding: 20px;
+
+  cursor: pointer;
+  &::before {
+    transform: scaleY(0);
+    transform-origin: bottom left;
+  }
+  &:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom right;
+  }
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: $greenlighter;
+    z-index: -1;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover {
+    color: $orangewhite;
+  }
+
+  .post-card_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .post-card_info {
+      padding-bottom: 2rem;
+    }
+    .baseline-vert-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: auto;
+      bottom: 0;
+      height: 100%;
+      border-left: 1px solid var(--border);
+      -webkit-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+    }
+    .baseline {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      z-index: 5;
+      overflow: hidden;
+      width: 100%;
+      height: 1px;
+      margin-top: 0;
+      margin-bottom: 0;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      font-size: 20rem;
+      line-height: 100%;
+      font-weight: 500;
+      text-transform: none;
+      white-space: nowrap;
+      background-color: var(--border);
+    }
+
+    .post-card_content {
+      padding-top: 2rem;
+      display: grid;
+      // grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: px;
+      .excerpt {
+      }
+      .fimg_wrapper {
+        width: 100%;
+      }
+      .fimg {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+img {
+  width: 100%;
+}

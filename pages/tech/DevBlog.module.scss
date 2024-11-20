@@ -1,0 +1,210 @@
+.www_devblog {
+  margin-top: 50px;
+}
+
+.www_devblog-wrapper {
+  background-color: #0a2e22;
+  padding: 6rem 0 16rem;
+}
+.www_devblog-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.www_devblog-main {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.www_devblog-featureWrapper {
+  position: relative;
+  height: 45rem;
+  margin: auto;
+  margin-top: -9rem;
+}
+
+.www_devblog-featureImage {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.www_devblog-content {
+  padding: 6rem;
+  p {
+    color: var(--graydark);
+    code {
+      padding: 0 5px;
+    }
+  }
+  .headingSet {
+    display: block;
+    line-height: 103%;
+    position: relative;
+    font-weight: 400;
+  }
+
+  h1 {
+    @extend .headingSet;
+    font-size: 12rem;
+    font-weight: 800;
+  }
+
+  h2 {
+    @extend .headingSet;
+    font-size: 10rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    @extend .headingSet;
+    font-size: 5rem;
+  }
+
+  h4 {
+    @extend .headingSet;
+    font-size: 3rem;
+  }
+
+  h5 {
+    @extend .headingSet;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  h6 {
+    @extend .headingSet;
+    font-size: 1.3rem;
+  }
+
+  pre {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    padding: 25px 20px;
+    margin: 30px 0;
+    border-radius: 7px;
+    overflow: auto;
+
+    code {
+      counter-reset: line;
+      color: #ffffff;
+      background: #000000;
+    }
+
+    @media only screen and (min-width: 0px) and (max-width: 576px) {
+      overflow: auto;
+      padding: 25px 14px;
+
+      ::-webkit-scrollbar {
+        width: 0 !important;
+      }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      overflow: auto;
+    }
+  }
+
+  code {
+    background: #5a3508;
+    //   padding: 5px 3px;
+    border-radius: 3px;
+    color: #ffffff;
+  }
+
+  img {
+    margin: 30px 0;
+  }
+}
+
+.www_devblog-content {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .www_devblog-wrapper {
+    background-color: #0a2e22;
+    padding: 3rem 0 12rem;
+  }
+  .www_devblog-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .www_devblog-content {
+    padding: 1rem 0;
+
+    h1 {
+      font-size: 3.6rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2.3rem;
+    }
+    h4 {
+      font-size: 1.6rem;
+    }
+    h5 {
+      font-size: 1.3rem;
+    }
+    h6 {
+      font-size: 1.1rem;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .www_devblog-wrapper {
+    background-color: #0a2e22;
+    padding: 3rem 0 12rem;
+  }
+
+  .www_devblog-featureWrapper {
+    height: 15rem;
+  }
+
+  .www_devblog-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .www_devblog-content {
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: $background;
+  position: relative;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .scroll {
+    padding: 2vh 0;
+    pointer-events: none;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

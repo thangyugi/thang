@@ -1,0 +1,183 @@
+---
+title: 'Creational Design Patterns trong Javascript'
+publishedAt: '2022-03-06'
+excerpt: 'Là một tập hợp các mẫu thiết kế trong lập trình được sử dụng để tạo ra các đối tượng. Trong JavaScript, có nhiều Creational Design Patterns khác nhau. Các mẫu sáng tạo bao gồm các cơ chế khác nhau được sử dụng để tạo các đối tượng.'
+cover_image: '/blog/creational-design-patterns/creational-design-patterns.jpg'
+---
+
+Creational Design Patterns là một tập hợp các mẫu thiết kế trong lập trình được sử dụng để tạo ra các đối tượng. Trong JavaScript, có nhiều Creational Design Patterns khác nhau, nhưng trong đó có một số mẫu được sử dụng phổ biến:
+
+##### 1. Factory Pattern
+
+Đây là một mẫu thiết kế được sử dụng để tạo ra các đối tượng mà không cần biết chi tiết về cách chúng được tạo ra. Thay vì gọi trực tiếp hàm tạo đối tượng, bạn có thể sử dụng một phương thức tạo đối tượng để tạo ra các đối tượng mới.
+
+###### Ví dụ:
+
+```js
+class Animal {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log('Woof!')
+  }
+}
+
+class Cat extends Animal {
+  meow() {
+    console.log('Meow!')
+  }
+}
+
+function createAnimal(type, name, age) {
+  switch (type) {
+    case 'dog':
+      return new Dog(name, age)
+    case 'cat':
+      return new Cat(name, age)
+    default:
+      throw new Error('Invalid animal type')
+  }
+}
+
+const myDog = createAnimal('dog', 'Fido', 3)
+myDog.bark()
+```
+
+##### 2. Constructor Pattern
+
+Đây là một mẫu thiết kế được sử dụng để tạo ra các đối tượng thông qua việc sử dụng hàm tạo đối tượng. Khi bạn gọi hàm tạo đối tượng với từ khóa "new", một đối tượng mới sẽ được tạo ra và được trả về.
+
+###### Ví dụ:
+
+```js
+function Person(name, age) {
+  this.name = name
+  this.age = age
+}
+
+const john = new Person('John', 30)
+console.log(john.name) // Output: "John"
+```
+
+##### 3. Singleton Pattern
+
+Đây là một mẫu thiết kế được sử dụng để đảm bảo rằng chỉ có một thể hiện của một đối tượng được tạo ra trong toàn bộ ứng dụng. Điều này đảm bảo rằng các thành phần khác nhau trong ứng dụng sẽ sử dụng cùng một thể hiện của đối tượng, giảm thiểu bộ nhớ và đảm bảo tính nhất quán của dữ liệu.
+
+###### Ví dụ:
+
+```js
+const singleton = (function () {
+  let instance
+
+  function createInstance() {
+    const object = new Object('I am the instance')
+    return object
+  }
+
+  return {
+    getInstance: function () {
+      if (!instance) {
+        instance = createInstance()
+      }
+      return instance
+    },
+  }
+})()
+
+const instance1 = singleton.getInstance()
+const instance2 = singleton.getInstance()
+
+console.log(instance1 === instance2) // Output: true
+```
+
+##### 4. Prototype Pattern
+
+Đây là một mẫu thiết kế được sử dụng để tạo ra các đối tượng thông qua sao chép các đối tượng đã có sẵn thay vì tạo mới chúng. Điều này giúp giảm thiểu tài nguyên được sử dụng để tạo ra các đối tượng và cũng giúp tăng hiệu suất của ứng dụng.
+
+###### Ví dụ:
+
+```js
+const carPrototype = {
+  brand: 'Unknown',
+  model: 'Unknown',
+  year: 'Unknown',
+  getPrice: function () {
+    return this.price
+  },
+  getInfo: function () {
+    return `This is a ${this.year} ${this.brand} ${this.model} car`
+  },
+}
+
+const car1 = Object.create(carPrototype)
+car1.brand = 'Toyota'
+car1.model = 'Corolla'
+car1.year = 2020
+car1.price = 20000
+
+const car2 = Object.create(carPrototype)
+car2.brand = 'Honda'
+car2.model = 'Civic'
+car2.year = 2021
+car2.price = 25000
+
+console.log(car1.getInfo()) // Output: "This is a 2020 Toyota Corolla car"
+console.log(car2.getInfo()) // Output: "This is a 2021 Honda Civic car"
+```
+
+##### 5. Builder Pattern
+
+Đây là một mẫu thiết kế được sử dụng để tạo ra các đối tượng phức tạp bằng cách sử dụng nhiều bước xây dựng đối tượng. Điều này cho phép chúng ta tạo ra các đối tượng phức tạp mà không cần biết chi tiết cụ thể về cách chúng được tạo ra.
+
+###### Ví dụ:
+
+```js
+class Car {
+  constructor() {
+    this.brand = ''
+    this.model = ''
+    this.year = ''
+    this.price = ''
+  }
+}
+
+class CarBuilder {
+  constructor() {
+    this.car = new Car()
+  }
+  setBrand(brand) {
+    this.car.brand = brand
+    return this
+  }
+  setModel(model) {
+    this.car.model = model
+    return this
+  }
+  setYear(year) {
+    this.car.year = year
+    return this
+  }
+  setPrice(price) {
+    this.car.price = price
+    return this
+  }
+  build() {
+    return this.car
+  }
+}
+
+const car = new CarBuilder()
+  .setBrand('Toyota')
+  .setModel('Corolla')
+  .setYear(2020)
+  .setPrice(20000)
+  .build()
+
+console.log(car.brand) // Output: "Toyota"
+console.log(car.model) // Output: "Corolla"
+```

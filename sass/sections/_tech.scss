@@ -1,0 +1,27 @@
+.techSection {
+  overflow: hidden;
+}
+
+.center_dev {
+  border-radius: var(--radius-md);
+  margin: 10rem 0;
+  padding: 5px;
+  text-align: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tech-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+}

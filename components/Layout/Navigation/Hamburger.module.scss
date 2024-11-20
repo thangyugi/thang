@@ -1,0 +1,302 @@
+.hamburger-menu {
+  display: none;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  .menu-secondary-background-color {
+    background: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .menu-layer {
+    position: relative;
+    background: var(--greenlighter);
+    height: 100%;
+    overflow: hidden;
+
+    .container {
+      width: 1280px;
+      min-width: 1280px;
+      margin: 0 auto;
+      .wrapper {
+        padding: 0 48px;
+        .menu-links {
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 200;
+          display: grid;
+          grid-template-columns: 20% 30% 50%;
+          grid-template-rows: 60% 40%;
+          grid-template-areas:
+            'item3 item2 item1'
+            'item4 item5 item1';
+
+          .menu__item--1 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            grid-area: item1;
+          }
+          .menu__item--2 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            grid-area: item2;
+          }
+          .menu__item--3 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            grid-area: item3;
+          }
+          .menu__item--4 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            grid-area: item4;
+          }
+          .menu__item--5 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            grid-area: item5;
+          }
+
+          .mainLinks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--greenlighter);
+            margin: 50px 0;
+            border-top: 1px solid var(--orangewhite);
+            border-bottom: 1px solid var(--orangewhite);
+            ul {
+              margin: 0;
+              padding: 0;
+              li {
+                list-style: none;
+
+                font-weight: 700;
+                cursor: pointer;
+                height: 135px;
+                overflow: hidden;
+                position: relative;
+
+                a {
+                  position: relative;
+                  color: var(--orangewhite);
+                  text-decoration: none;
+                  &:hover {
+                    color: black;
+                  }
+                }
+              }
+            }
+          }
+
+          .mapCell {
+            background-image: url('/navmenu/control-the-world.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+          .resumeCell {
+            display: flex;
+            padding: 30px;
+            background-color: var(--greenlighter);
+            .resumeWrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              flex: 1;
+              border: 2px solid var(--greenlighter);
+              h5 {
+                text-decoration: underline;
+              }
+            }
+            &:hover {
+              .resumeWrapper {
+                border: 2px solid var(--orangewhite);
+                -webkit-transition: border 1s ease-out;
+                -moz-transition: border 1s ease-out;
+                -o-transition: border 1s ease-out;
+                transition: border 1s ease-out;
+
+                h5 {
+                  color: var(--orangewhite);
+                }
+              }
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            background-color: #111111;
+            gap: 20px;
+            justify-content: center;
+          }
+        }
+        .logoCell {
+          display: flex;
+          position: relative;
+          background-color: #111111;
+          flex-direction: column;
+          justify-content: center;
+          gap: 6px;
+          padding: 30px;
+          .backBtn {
+            display: none;
+          }
+          &:hover {
+            color: var(--orangewhite);
+            background: black;
+            padding: 8px 24px;
+            border-radius: 4px;
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .hamburger-menu {
+    .menu-secondary-background-color {
+    }
+    .menu-layer {
+      .menu-city-background {
+      }
+
+      .container {
+        .wrapper {
+          .menu-links {
+            display: flex;
+            flex-direction: column;
+            .menu__item--1 {
+              flex: 1;
+              width: 100%;
+              position: relative;
+              overflow: hidden;
+            }
+            .menu__item--2 {
+              display: none;
+            }
+            .menu__item--3 {
+              flex: 1;
+              width: 100%;
+              position: relative;
+              overflow: hidden;
+            }
+            .menu__item--4 {
+              flex: 1;
+              width: 100%;
+              position: relative;
+              overflow: hidden;
+            }
+            .menu__item--5 {
+              display: none;
+            }
+
+            .mainLinks {
+              padding: 50px 0;
+              margin: 0;
+              border-top: none;
+              border-bottom: none;
+              ul {
+                margin: 0;
+                padding: 0;
+                li {
+                  height: 60px;
+                  a {
+                    &:hover {
+                      color: black;
+                    }
+                  }
+                }
+              }
+            }
+
+            .mapCell {
+            }
+            .resumeCell {
+              .resumeWrapper {
+                h5 {
+                  text-decoration: underline;
+                }
+              }
+              &:hover {
+                .resumeWrapper {
+                  border: 2px solid var(--orangewhite);
+                  -webkit-transition: border 1s ease-out;
+                  -moz-transition: border 1s ease-out;
+                  -o-transition: border 1s ease-out;
+                  transition: border 1s ease-out;
+
+                  h5 {
+                    color: var(--orangewhite);
+                  }
+                }
+              }
+            }
+
+            .info {
+            }
+          }
+          .logoCell {
+            .backBtn {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              justify-content: center;
+              h6 {
+                text-decoration: underline;
+              }
+              svg {
+                width: 30px;
+                height: 30px;
+                fill: var(--orangewhite);
+              }
+            }
+            &:hover {
+              color: var(--orangewhite);
+              background: black;
+              padding: 8px 24px;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

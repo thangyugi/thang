@@ -1,0 +1,291 @@
+[
+    {
+        "title": "ウェブ開発",
+        "subtitle": "2019年 - 2021年",
+        "description": "不動産、飲食店、建設業、その他の業界向けにEコマースウェブサイトと販売管理システムを開発。ウェブサイトの要件分析、UI/UXデザイン、実装、メンテナンスに携わる。",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "ReactJS",
+            "Framer",
+            "ThreeJs",
+            "Spring",
+            "PHP",
+            "MySQL",
+            "WordPress",
+            "Shopify",
+            "Liquid",
+            "Xserver",
+            "Linux",
+            "Figma",
+            "Illustrator"
+        ],
+        "features": [
+            {
+                "title": "Eコマースウェブサイト開発:",
+                "items": [
+                    "商品検索機能の実装",
+                    "ユーザープロフィールページの開発",
+                    "ショッピングカート機能の構築",
+                    "決済システムの統合",
+                    "UI/UXの最適化"
+                ],
+                "image": "/myproject/ecsite.jpg"
+            },
+            {
+                "title": "WordPress開発:",
+                "items": [
+                    "カスタムテーマの作成",
+                    "プラグインの開発と統合",
+                    "WooCommerceを使用したEC機能の実装",
+                    "セキュリティ強化",
+                    "パフォーマンス最適化"
+                ],
+                "image": "/myproject/landing.jpg"
+            },
+            {
+                "title": "UI/UX改善:",
+                "items": [
+                    "企業CMSの製品インターフェースの改善",
+                    "ユーザー体験の多数の改善を実施",
+                    "モバイル向けレスポンシブデザインの実装",
+                    "A/Bテストの実施と分析"
+                ],
+                "image": "/myproject/uiux.jpg"
+            },
+            {
+                "title": "サーバー管理:",
+                "items": [
+                    "Linuxサーバーの設定と管理",
+                    "Xserver上でのホスティング環境の最適化",
+                    "セキュリティアップデートの適用",
+                    "バックアップシステムの構築"
+                ],
+                "image": "/myproject/server.jpg"
+            }
+        ]
+    },
+    {
+        "title": "社内アプリケーション開発",
+        "subtitle": "2021年",
+        "description": "データベース内のスケジュールを管理・編集するウェブアプリケーションを開発。Google Calendarのデータを変換システムとして使用。",
+        "tags": [
+            "HTML",
+            "CSS/SCSS",
+            "JavaScript",
+            "Python",
+            "Django",
+            "Bootstrap",
+            "Figma",
+            "AWS S3",
+            "EC2",
+            "Nginx"
+        ],
+        "features": [
+            {
+                "title": "要件分析とデザイン:",
+                "items": [
+                    "社内スケジュール管理の改善を支援",
+                    "Figmaを使用したユーザーインターフェースの作成"
+                ]
+            },
+            {
+                "title": "バックエンド開発:",
+                "items": [
+                    "Djangoフレームワークを使用したバックエンドの構築",
+                    "Google Calendar APIとの統合",
+                    "データ処理と分析のためのPythonスクリプト作成",
+                    "RESTful APIの実装",
+                    "セキュリティ対策の実施"
+                ]
+            },
+            {
+                "title": "フロントエンド開発:",
+                "items": [
+                    "レスポンシブデザインの実装（HTML、CSS/SCSS）",
+                    "JavaScriptを使用した動的UIコンポーネントの作成",
+                    "Bootstrapを使用したレイアウト設計",
+                    "クロスブラウザ互換性の確保",
+                    "パフォーマンスの最適化"
+                ]
+            },
+            {
+                "title": "デプロイメントとメンテナンス:",
+                "items": [
+                    "AWS EC2インスタンスの設定",
+                    "Nginxウェブサーバーのセットアップ",
+                    "CI/CDパイプラインの構築",
+                    "アプリケーションログの監視と分析"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "建設業向けSaaS",
+        "subtitle": "2021年 — 2023年",
+        "description": "建設業向けの革新的な業務管理システム。最新のウェブ技術と現代的なUI/UXデザインを適用し、見積書・実行予算の管理のための効率的でユーザーフレンドリーなソリューションを創出。",
+        "tags": [
+            "ReactJS",
+            "NextJS",
+            "TypeScript",
+            "Axios",
+            "React Query",
+            "SWR",
+            "React Hook Form",
+            "Material UI",
+            "Recoil",
+            "Storybook",
+            "Atomic Design",
+            "Figma",
+            "Miro"
+        ],
+        "features": [
+            {
+                "title": "フェーズ1: 基盤構築と主要機能の実装",
+                "items": [
+                    "ReactJS、Axios、React Queryを使用した効率的なAPI通信システムの構築",
+                    "Material UIとReact Hook Formを使用した直感的なUIと強力なフォーム実装",
+                    "Recoilを使用した効率的な状態管理システムの実装",
+                    "ユーザー中心設計手法の適用とFigma、Miroを使用したプロトタイピング"
+                ]
+            },
+            {
+                "title": "フェーズ2: 技術移行と機能拡張",
+                "items": [
+                    "NextJSとTypeScriptへの移行によるパフォーマンスとタイプセーフティの向上",
+                    "SWRを使用したデータフェッチの最適化とキャッシュ戦略の実装",
+                    "StorybookとAtomic Designを適用した再利用可能なUIコンポーネントライブラリの構築",
+                    "Cypressを使用したE2Eテスト自動化による品質保証プロセスの強化"
+                ],
+                "image": "/myproject/gacci/gacci_3.png"
+            },
+            {
+                "title": "主要機能と技術革新",
+                "items": [
+                    "詳細なプロジェクトデータ管理システムの開発",
+                    "見積依頼と見積データ作成機能の実装",
+                    "下請業者の分類と選択プロセスの最適化",
+                    "実行予算管理システムの構築",
+                    "見積依頼プロセスの自動化",
+                    "見積データの効率的な作成と管理",
+                    "詳細な実行予算管理・分析ツールの開発",
+                    "企業情報管理機能の開発",
+                    "従業員管理システムの実装",
+                    "カスタマイズ可能な承認プロセスの設計",
+                    "詳細なアクセス権限設定機能の構築"
+                ],
+                "image": "/myproject/gacci/gacci_2.png"
+            },
+            {
+                "title": "UI/UXデザインプロセスと成果",
+                "items": [
+                    "FigmaとMiroを使用した協調的デザインワークショップの開催",
+                    "デザインシステムの構築とStorybookとの統合によるデザインと開発の一貫性確保"
+                ],
+                "image": "/myproject/gacci/gacci_1.png"
+            }
+        ]
+    },
+    {
+        "title": "通信サービス開発",
+        "subtitle": "2023年",
+        "description": "企業向け電話サービスと固定電話サービスの開発プロジェクトにBrSEとして参加し、多様な責任を担当。",
+        "tags": [
+            "Java",
+            "Spring Boot",
+            "PostgreSQL",
+            "Windows",
+            "A5M2",
+            "Postman",
+            "WinSCP",
+            "TeraTerm",
+            "Docker",
+            "Workspaces"
+        ],
+        "features": [
+            {
+                "title": "プロジェクト管理と技術サポート",
+                "items": [
+                    "プロジェクト関連文書の調査と管理",
+                    "システムの理解と分析、コーディング支援",
+                    "単体テスト仕様書作成のガイダンスとテスト実施",
+                    "社内外環境や他環境との統合テストを含む、システム関連のあらゆる活動への参加"
+                ]
+            },
+            {
+                "title": "コミュニケーションと顧客関係",
+                "items": [
+                    "日次での顧客との対面ミーティングへの参加",
+                    "進捗報告、情報交換、通訳、翻訳",
+                    "品質チェックとオフショアチームへのシステムと各機能のビジネスプロセス理解のガイダンス",
+                    "多国籍環境での作業進捗管理、コミュニケーション、情報共有、品質管理"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "建設業務アプリケーション",
+        "subtitle": "2024年",
+        "description": "図面と不動産に関連する業務を処理するアプリケーション開発プロジェクトに参加し、フロントエンド開発を担当。",
+        "tags": [
+            "HTML",
+            "CSS/SCSS",
+            "Javascript",
+            "Typescript",
+            "ReactJS",
+            "React Router",
+            "Axios",
+            "MUI",
+            "IndexedDB",
+            "PSPDFKIT",
+            "MSW 2.0",
+            "Docker",
+            "Zeplin",
+            "Redux Toolkit",
+            "OIDC",
+            "ServiceWorker"
+        ],
+        "features": [
+            {
+                "title": "ユーザーインターフェース開発",
+                "items": [
+                    "全体的なインターフェースとコンポーネントの設計と実装",
+                    "React Routerを使用したルーティングとタブバーシステムの構築",
+                    "多様なデバイス向けのレスポンシブデザインの適用",
+                    "MUIを使用したUIコンポーネントの開発"
+                ],
+                "image": "/myproject/sumirin/sumirin_3.png"
+            },
+            {
+                "title": "機能実装とデータ処理",
+                "items": [
+                    "Redux Toolkitを使用した状態管理の実装",
+                    "不動産と図面の管理・編集機能の開発",
+                    "PSPDFKITを使用したPDFファイルの処理と表示",
+                    "プロジェクトの全画面におけるソート機能の実装"
+                ],
+                "image": "/myproject/sumirin/sumirin_1.png"
+            },
+            {
+                "title": "パフォーマンスとセキュリティ",
+                "items": [
+                    "オフラインサポートと高速化のためのPWA（Progressive Web App）の適用",
+                    "API処理のセットアップと最適化",
+                    "OIDCを使用した認証システムの実装",
+                    "ServiceWorkerを使用したバックグラウンド処理の最適化"
+                ],
+                "image": "/myproject/sumirin/sumirin_2.png"
+            },
+            {
+                "title": "開発プロセスと学習",
+                "items": [
+                    "スケーラブルなアーキテクチャの設計と実装",
+                    "クリーンアーキテクチャの適用方法の学習",
+                    "Dockerを使用した開発環境の構築と管理",
+                    "Zeplinを使用したデザインと開発のシームレスな統合"
+                ]
+            }
+        ]
+    }
+]
